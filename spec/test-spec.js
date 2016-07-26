@@ -1,12 +1,23 @@
-const main = require('../main/main');
+const CompareNumber = require('../main/models/CompareNumber');
 
 describe('guessNumber', () => {
 
-    it('print correct text',() => {
+    it('print correct text', () => {
         const randomNumber = '1234';
         const guess = '1234';
-        //expect(main.printResult(randomNumber,guess)).toEqual('4A0B');
-        expect(main(randomNumber,guess)).toBe('4A0B');
+        expect(CompareNumber.guessNumber(randomNumber, guess)).toBe('4A0B');
     });
-    
+
+    it('print correct text', () => {
+        const randomNumber = '1234';
+        const guess = '4321';
+        expect(CompareNumber.guessNumber(randomNumber, guess)).toBe('0A4B');
+    });
+
+    it('print correct text', () => {
+        const randomNumber = '1234';
+        const guess = '1255';
+        expect(CompareNumber.guessNumber(randomNumber, guess)).toBe('2A0B');
+    });
+
 });
