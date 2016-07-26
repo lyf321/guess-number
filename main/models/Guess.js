@@ -9,5 +9,3 @@ class Guess {
         return compareNumber;
     }
 }
-
-module.exports = Guess;

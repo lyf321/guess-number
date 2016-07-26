@@ -1,7 +1,6 @@
 const Guess = require('../main/models/Guess');
 const AnswerGenerator = require('../main/models/AnswerGenerator');
 
-
 describe('Guess', () => {
 
     it('should print correct XAXB',() => {

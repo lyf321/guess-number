@@ -5,9 +5,9 @@ class CompareNumber {
         const inputs = Array.from(input);
         const answers = Array.from(answer);
 
-        const countB = inputs.map((guess, index) => answers[index] != guess && answers.some(ran => ran === guess ? 1 : 0))
+        const countB = inputs.map((input, index) => answers[index] != input && answers.some(ran => ran === input ? 1 : 0))
             .reduce((pre, next) => pre + next);
-        const countA = inputs.map((guess, index) => answers[index] === guess && answers.some(ran => ran === guess ? 1 : 0))
+        const countA = inputs.map((input, index) => answers[index] === input && answers.some(ran => ran === input ? 1 : 0))
             .reduce((pre, next) => pre + next);
 
         return `${countA}A${countB}B`
