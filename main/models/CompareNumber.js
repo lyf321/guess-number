@@ -5,15 +5,14 @@ class CompareNumber {
         const inputs = Array.from(input);
         const answers = Array.from(answer);
 
-        const countB = inputs.map((input, index) => answers[index] != input && answers.some(ran => ran === input ? 1 : 0))
+        const countB = inputs.map((input, index) => answers[index] != input && answers.some(answer => answer === input ? 1 : 0))
             .reduce((pre, next) => pre + next);
-        const countA = inputs.map((input, index) => answers[index] === input && answers.some(ran => ran === input ? 1 : 0))
+        const countA = inputs.map((input, index) => answers[index] === input && answers.some(answer => answer === input ? 1 : 0))
             .reduce((pre, next) => pre + next);
 
-        return `${countA}A${countB}B`
+        return `${countA}A${countB}B`;
     }
 
-    
     
     /* static guessNumber(input, answer) {
 

@@ -5,8 +5,8 @@ describe('Guess', () => {
 
     it('should print correct XAXB',() => {
         spyOn(AnswerGenerator,'generate').and.returnValue('1234');
-        const result = Guess.guess('1234');
-        expect(result).toEqual('4A0B')
-    })
-    
-})
+        const input = '1234';
+        const result = Guess.guess(input);
+        expect(result).toEqual('4A0B');
+    });
+});

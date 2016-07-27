@@ -1,3 +1,5 @@
 const main = require('./main/main');
 
-main.main();
+const run = new main();
+
+run.main();
